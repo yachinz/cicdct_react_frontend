@@ -33,6 +33,7 @@ const URLForm = (props) => {
 							placeholder="Paste URL here..."
 							aria-describedby="Long URL"
 							required
+							id="cloud_url_input"
 						/>
 						<Form.Control.Feedback type="invalid">Please enter a valid URL.</Form.Control.Feedback>
 						<Form.Control.Feedback>Generating short URL...</Form.Control.Feedback>

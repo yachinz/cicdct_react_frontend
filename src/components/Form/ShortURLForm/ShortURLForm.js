@@ -43,6 +43,7 @@ const ShortURLForm = (props) => {
 									aria-describedby="Short URL"
                                     onChange={shortURLChangeHandler}
                                     className={styles.URLTextInput}
+									id="cloud_url_output"
 								/>
 							</InputGroup>
 							{copiedFeedback}
