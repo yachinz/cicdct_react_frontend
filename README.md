@@ -1,3 +1,7 @@
+To use this app in port 3000, run npm install and then npm start.
+If you want to build this react application using npm build then you need to change the package.JOSN file. Replace "react-scripts start" with "node server.js". And change the "const API = `http://localhost:5000/api`"
+in Body.js into 'http://localhost:5000/'. Then build it and put the build folder into UI folder in Flask app.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
