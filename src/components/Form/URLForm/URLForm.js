@@ -14,18 +14,19 @@ const URLForm = (props) => {
 		if (form.checkValidity() === false) {
 			event.stopPropagation();
 		}
-
-		const longURL = event.target.elements.URL.value;
-		console.log('Long URL: ', longURL);
+		const longURL = event.target.elements.cloud_url_input.value;
+		// console.log('Long URL: ', longURL);
 		setValidated(true);
-		props.getShortURLHandler(longURL);
-
+		if (form.checkValidity() === true) {
+			props.getShortURLHandler(longURL);
+			setValidated(false);
+		}
 	};
 
 	return (
 		<Form noValidate validated={validated} onSubmit={handleSubmit}>
 			<Form.Row className={styles.URLForm}>
-				<Form.Group as={Col} md="6" controlId="URL" className={styles.Form}>
+				<Form.Group as={Col} md="6" className={styles.Form}>
 					<Form.Label className={styles.InputLabel}>Enter URL</Form.Label>
 					<InputGroup className={styles.InputField}>
 						<Form.Control
@@ -36,7 +37,7 @@ const URLForm = (props) => {
 							id="cloud_url_input"
 						/>
 						<Form.Control.Feedback type="invalid">Please enter a valid URL.</Form.Control.Feedback>
-						<Form.Control.Feedback>Generating short URL...</Form.Control.Feedback>
+						{/* <Form.Control.Feedback type="valid">Generating short URL...</Form.Control.Feedback> */}
 					</InputGroup>
 					<div className={styles.GetButton}>
 						<Button type="submit" color="#2789f2">

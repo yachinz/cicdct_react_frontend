@@ -14,11 +14,10 @@ const LandingPage = () => {
 
 	const getShortURLHandler = (url) => {
 		const urlObj = {
-			original_link: url,
-			expire_at: '2020/10/20'
+			original_link: url
 		};
 		// const API = `http://shorturl3-ece-528-building-ci-cd-for-api.k-apps.osh.massopen.cloud/`;
-		const API = `http://localhost:5000/api`;
+		const API = `http://localhost:5000/api/`;
 		// setIsLoading(true);
 		axios
 			.post(API, urlObj, {

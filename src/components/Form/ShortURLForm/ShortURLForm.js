@@ -26,7 +26,7 @@ const ShortURLForm = (props) => {
 			{props.shortURL ? (
 				<Form>
 					<Form.Row className={styles.ShortURLForm}>
-						<Form.Group as={Col} md="6" controlId="URL" className={styles.Form}>
+						<Form.Group as={Col} md="6" className={styles.Form}>
 							<Form.Label className={styles.InputLabel}>Get Short URL</Form.Label>
 
 							<InputGroup className={styles.InputField}>
