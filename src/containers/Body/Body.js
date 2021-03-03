@@ -13,6 +13,7 @@ const LandingPage = () => {
 	// const [ isLoading, setIsLoading ] = useState(false);
 
 	const getShortURLHandler = (url) => {
+		console.log("pass");
 		const urlObj = {
 			original_link: url
 		};
